@@ -32,6 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DnnTableMappingHelper.cs" />
+    <Compile Include="EFCoreDataContextBase.cs" />
+    <Compile Include="EFCoreDnnDataContextBase.cs" />
+    <Compile Include="EFCoreTransaction.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="R7.Dnn.Extensions.EFCore.dnn" />
@@ -102,9 +106,6 @@
     <Reference Include="YamlDotNet">
       <HintPath>..\packages\YamlDotNet.4.2.1\lib\net35\YamlDotNet.dll</HintPath>
     </Reference>
-    <Reference Include="R7.Dnn.Extensions">
-      <HintPath>..\packages\R7.Dnn.Extensions.0.12.0\lib\net45\R7.Dnn.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Collections.Immutable">
       <HintPath>..\packages\System.Collections.Immutable.1.3.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
@@ -164,6 +165,9 @@
     <Reference Include="System.Transactions" />
     <Reference Include="Microsoft.EntityFrameworkCore.SqlServer">
       <HintPath>..\packages\Microsoft.EntityFrameworkCore.SqlServer.1.1.1\lib\net451\Microsoft.EntityFrameworkCore.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="R7.Dnn.Extensions">
+      <HintPath>..\..\R7.Dnn.Extensions\R7.Dnn.Extensions\bin\Release\R7.Dnn.Extensions.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

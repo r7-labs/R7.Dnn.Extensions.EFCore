@@ -104,9 +104,6 @@
       <HintPath>..\packages\NGettext.0.6.3\lib\net45\NGettext.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="R7.Dnn.Extensions">
-      <HintPath>..\packages\R7.Dnn.Extensions.0.12.0\lib\net45\R7.Dnn.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Collections.Immutable">
       <HintPath>..\packages\System.Collections.Immutable.1.3.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
@@ -170,6 +167,9 @@
     <Reference Include="Microsoft.EntityFrameworkCore.Sqlite">
       <HintPath>..\packages\Microsoft.EntityFrameworkCore.Sqlite.1.1.1\lib\net451\Microsoft.EntityFrameworkCore.Sqlite.dll</HintPath>
     </Reference>
+    <Reference Include="R7.Dnn.Extensions">
+      <HintPath>..\..\R7.Dnn.Extensions\R7.Dnn.Extensions\bin\Release\R7.Dnn.Extensions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\xunit.core.2.1.0\build\portable-net45+win8+wp8+wpa81\xunit.core.props" Condition="Exists('..\packages\xunit.core.2.1.0\build\portable-net45+win8+wp8+wpa81\xunit.core.props')" />
@@ -182,6 +182,14 @@
       <Project>{C97D1366-F70B-4AA7-83BD-8F24B9275C1F}</Project>
       <Name>R7.Dnn.Extensions.EFCore</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EFCoreDataContextTests.cs" />
+    <Compile Include="EFCoreTestDataContext.cs" />
+    <Compile Include="Models\TestEntity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
