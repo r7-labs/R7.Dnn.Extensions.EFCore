@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R7.Dnn.Extensions.EFCore.Tests", "R7.Dnn.Extensions.EFCore.Tests\R7.Dnn.Extensions.EFCore.Tests.csproj", "{EBBAFC4D-39BB-4ED9-B607-0BC57148EE87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deploy", "Deploy\Deploy.csproj", "{DB3D1CCD-B499-49FC-868F-EC5B7D26D75F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R7.Dnn.Extensions.EFCore", "R7.Dnn.Extensions.EFCore\R7.Dnn.Extensions.EFCore.csproj", "{C97D1366-F70B-4AA7-83BD-8F24B9275C1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBBAFC4D-39BB-4ED9-B607-0BC57148EE87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBBAFC4D-39BB-4ED9-B607-0BC57148EE87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBBAFC4D-39BB-4ED9-B607-0BC57148EE87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBBAFC4D-39BB-4ED9-B607-0BC57148EE87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB3D1CCD-B499-49FC-868F-EC5B7D26D75F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB3D1CCD-B499-49FC-868F-EC5B7D26D75F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB3D1CCD-B499-49FC-868F-EC5B7D26D75F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB3D1CCD-B499-49FC-868F-EC5B7D26D75F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C97D1366-F70B-4AA7-83BD-8F24B9275C1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C97D1366-F70B-4AA7-83BD-8F24B9275C1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C97D1366-F70B-4AA7-83BD-8F24B9275C1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C97D1366-F70B-4AA7-83BD-8F24B9275C1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.NoTabsAfterNonTabs = True
+		$1.scope = text/x-csharp
+		$1.FileWidth = 80
+		$1.TabsToSpaces = True
+		$0.CSharpFormattingPolicy = $2
+		$2.IndentSwitchBody = True
+		$2.IndentBlocksInsideExpressions = True
+		$2.AnonymousMethodBraceStyle = NextLine
+		$2.PropertyBraceStyle = NextLine
+		$2.PropertyGetBraceStyle = NextLine
+		$2.PropertySetBraceStyle = NextLine
+		$2.EventBraceStyle = NextLine
+		$2.EventAddBraceStyle = NextLine
+		$2.EventRemoveBraceStyle = NextLine
+		$2.StatementBraceStyle = NextLine
+		$2.ElseNewLinePlacement = NewLine
+		$2.CatchNewLinePlacement = NewLine
+		$2.FinallyNewLinePlacement = NewLine
+		$2.WhileNewLinePlacement = DoNotCare
+		$2.ArrayInitializerWrapping = DoNotChange
+		$2.ArrayInitializerBraceStyle = NextLine
+		$2.NewLineBeforeConstructorInitializerColon = NewLine
+		$2.NewLineAfterConstructorInitializerColon = SameLine
+		$2.AfterDelegateDeclarationParameterComma = True
+		$2.BeforeSizeOfParentheses = True
+		$2.BeforeTypeOfParentheses = True
+		$2.SpacesAfterTypecast = True
+		$2.SpacesBeforeArrayDeclarationBrackets = True
+		$2.scope = text/x-csharp
+		$2.IndentSwitchSection = False
+		$2.NewLinesForBracesInProperties = False
+		$2.NewLinesForBracesInAccessors = False
+		$2.NewLinesForBracesInAnonymousMethods = False
+		$2.NewLinesForBracesInControlBlocks = False
+		$2.NewLinesForBracesInAnonymousTypes = False
+		$2.NewLinesForBracesInObjectCollectionArrayInitializers = False
+		$2.NewLinesForBracesInLambdaExpressionBody = False
+		$2.NewLineForElse = False
+		$2.NewLineForCatch = False
+		$2.NewLineForFinally = False
+		$2.NewLineForMembersInObjectInit = False
+		$2.NewLineForMembersInAnonymousTypes = False
+		$2.NewLineForClausesInQuery = False
+		$2.SpacingAfterMethodDeclarationName = True
+		$2.SpaceAfterMethodCallName = True
+		$2.SpaceBeforeOpenSquareBracket = True
+		$0.StandardHeader = $3
+		$3.Text = @\n ${FileName}\n \n Author:\n      ${AuthorName} <${AuthorEmail}>\n \n Copyright (c) ${Year} ${CopyrightHolder}\n\n This program is free software: you can redistribute it and/or modify\n it under the terms of the GNU Lesser General Public License as published by\n the Free Software Foundation, either version 3 of the License, or\n (at your option) any later version.\n\n This program is distributed in the hope that it will be useful,\n but WITHOUT ANY WARRANTY; without even the implied warranty of\n MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n GNU Lesser General Public License for more details.\n\n You should have received a copy of the GNU Lesser General Public License\n along with this program.  If not, see <http://www.gnu.org/licenses/>.
+		version = 0.1.0
+	EndGlobalSection
+EndGlobal

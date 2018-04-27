@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+    <metadata>
+        <id>R7.Dnn.Extensions.EFCore</id>
+        <version>$version$</version>
+        <title>R7.Dnn.Extensions.EFCore</title>
+        <authors>Roman M. Yagodin</authors>
+        <owners>Roman M. Yagodin</owners>
+        <licenseUrl>http://www.gnu.org/licenses/lgpl.txt</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <projectUrl>https://github.com/roman-yagodin/R7.Dnn.Extensions.EFCore</projectUrl>
+        <description>R7.Dnn.Extensions.EFCore is a library for DNN Platform web CMS extensions development with Entity Framework Core.</description>
+        <summary>R7.Dnn.Extensions.EFCore is a library for DNN Platform web CMS extensions development with Entity Framework Core (NOT STABLE).</summary>
+        <releaseNotes>https://github.com/roman-yagodin/R7.Dnn.Extensions.EFCore/blob/master/R7.Dnn.Extensions.EFCore/releaseNotes.htm</releaseNotes>
+        <copyright>Copyright 2018 Roman M. Yagodin &lt;roman.yagodin@gmail.com&gt;</copyright>
+        <tags>DotNetNuke DNN EntityFrameworkCore</tags>
+        <dependencies>
+			<dependency id="R7.Dnn.Extensions" version="0.13.0" />
+            <dependency id="Microsoft.EntityFrameworkCore.SqlServer" version="1.1.1" />
+		</dependencies>
+    </metadata>
+    <files>
+        <file src="bin/Release/R7.Dnn.Extensions.EFCore.dll" target="lib/net451" /> 
+        <file src="bin/Release/R7.Dnn.Extensions.EFCore.xml" target="lib/net451" />
+        <file src="license.htm" target="lib/net451" />
+        <file src="license-gpl.htm" target="lib/net451" />
+    </files>
+</package>

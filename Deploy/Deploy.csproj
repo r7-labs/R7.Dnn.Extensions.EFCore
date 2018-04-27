@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB3D1CCD-B499-49FC-868F-EC5B7D26D75F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Deploy</RootNamespace>
+    <AssemblyName>Deploy</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ReleaseVersion>0.1.0</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <NoWarn>CS2008</NoWarn>
+	<CustomCommands>
+	  <CustomCommands>
+	    <Command>
+	      <type>Custom</type>
+	      <name>Publish NuGet Package</name>
+	      <command>msbuild /t:Build /p:Configuration=${ProjectConfig} /p:PublishNuGetPackage=true ../R7.Dnn.Extensions.EFCore.sln</command>
+	    </Command>
+	  </CustomCommands>
+	</CustomCommands>	
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <NoWarn>CS2008</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\R7.Dnn.Extensions.EFCore.Tests\R7.Dnn.Extensions.EFCore.Tests.csproj">
+      <Project>{EBBAFC4D-39BB-4ED9-B607-0BC57148EE87}</Project>
+      <Name>R7.Dnn.Extensions.EFCore.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\R7.Dnn.Extensions.EFCore\R7.Dnn.Extensions.EFCore.csproj">
+      <Project>{C97D1366-F70B-4AA7-83BD-8F24B9275C1F}</Project>
+      <Name>R7.Dnn.Extensions.EFCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Deploy.csproj" />
+    <None Include="MakeDnnPackage.targets" />
+    <None Include="MakeNuGetPackage.targets" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PackageName>R7.Dnn.Extensions.EFCore</PackageName>
+    <MainProjectPath>../R7.Dnn.Extensions.EFCore</MainProjectPath>
+    <MainProjectOutputPath>$(MainProjectPath)/bin/$(Configuration)</MainProjectOutputPath>
+    <PackageOutputPath>bin/Deploy</PackageOutputPath>
+  </PropertyGroup>
+  <Import Project="MakeDnnPackage.targets" />
+  <Import Project="MakeNuGetPackage.targets" />
+  <Target Name="AfterBuild" DependsOnTargets="MakeDnnPackage;MakeNuGetPackage" />
+</Project>
