@@ -35,6 +35,8 @@
     <Compile Include="EFCoreDataContextBase.cs" />
     <Compile Include="EFCoreDnnDataContextBase.cs" />
     <Compile Include="EFCoreTransaction.cs" />
+    <Compile Include="EFCoreDataSet.cs" />
+    <Compile Include="EFCoreDnnDataSet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="R7.Dnn.Extensions.EFCore.dnn" />

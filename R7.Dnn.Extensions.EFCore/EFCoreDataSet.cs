@@ -1,5 +1,5 @@
 ﻿//
-//  EFCoreDataContextBase.cs
+//  EFCoreDataSet.cs
 //
 //  Author:
 //       Roman M. Yagodin <roman.yagodin@gmail.com>
@@ -19,42 +19,54 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using R7.Dnn.Extensions.Data;
-using R7.Dnn.Extensions.Models;
 
 namespace R7.Dnn.Extensions.EFCore
 {
-    public abstract class EFCoreDataContextBase: DbContext, IDataContext
+    public class EFCoreDataSet<TEntity>: DbSet<TEntity>, IDataSet<TEntity> where TEntity : class
     {
-        protected EFCoreDataContextBase ()
-        {}
+        protected DbSet<TEntity> Set;
 
-        protected EFCoreDataContextBase (DbContextOptions options): base (options)
-        {}
-
-        #region IDataContext implementation
-
-        public IDataSet<TEntity> GetDataSet<TEntity> () where TEntity : class
+        public EFCoreDataSet (DbSet<TEntity> set)
         {
-            return new EFCoreDataSet<TEntity> (Set<TEntity> ());
+            Set = set;
         }
 
-        public void WasModified<TEntity> (TEntity entity) where TEntity : class
+        public IQueryable<TEntity> Query ()
         {
-            Entry (entity).State = EntityState.Modified;
+            return Set;
         }
 
-        public void WasRemoved<TEntity> (TEntity entity) where TEntity : class
+        public virtual IQueryable<TEntity> FromSql (string sql, params object [] parameters)
         {
-            Entry (entity).State = EntityState.Deleted;
+            return Set.FromSql (sql, parameters).AsNoTracking ();
         }
 
-        public ITransaction BeginTransaction ()
+        void IDataSet<TEntity>.Add (TEntity entity)
         {
-            return new EFCoreTransaction (this);
+            Set.Add (entity);
         }
 
-        #endregion
+        void IDataSet<TEntity>.Attach (TEntity entity)
+        {
+            Set.Attach (entity);
+        }
+
+        void IDataSet<TEntity>.Remove (TEntity entity)
+        {
+            Set.Remove (entity);
+        }
+
+        public bool Exists (TEntity entity)
+        {
+            return Set.Local.Any (e => e == entity);
+        }
+
+        public TEntity Find<TKey> (TKey key)
+        {
+            return Set.Find (key);
+        }
     }
 }

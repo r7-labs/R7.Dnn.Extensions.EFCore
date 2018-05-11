@@ -1,5 +1,5 @@
 ﻿//
-//  EFCoreDnnDataContextBase.cs
+//  EFCoreDnnDataSet.cs
 //
 //  Author:
 //       Roman M. Yagodin <roman.yagodin@gmail.com>
@@ -19,33 +19,21 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+using System.Linq;
 using DotNetNuke.Common.Utilities;
 using Microsoft.EntityFrameworkCore;
-using R7.Dnn.Extensions.Data;
 
 namespace R7.Dnn.Extensions.EFCore
 {
-    public abstract class EFCoreDnnDataContextBase : EFCoreDataContextBase, IDataContext
+    public class EFCoreDnnDataSet<TEntity>: EFCoreDataSet<TEntity> where TEntity: class
     {
-        protected EFCoreDnnDataContextBase ()
+        public EFCoreDnnDataSet (DbSet<TEntity> set): base (set)
         {
-            ChangeTracker.AutoDetectChangesEnabled = false;
         }
 
-        protected override void OnConfiguring (DbContextOptionsBuilder optionsBuilder)
+        public override IQueryable<TEntity> FromSql (string sql, params object [] parameters)
         {
-            if (!optionsBuilder.IsConfigured) {
-                optionsBuilder.UseSqlServer (Config.GetConnectionString ("SiteSqlServer"));
-            }
-        }
-
-        protected override void OnModelCreating (ModelBuilder modelBuilder)
-        {
-            var databaseOwner = Config.GetDataBaseOwner ();
-            // remove trailing '.' from schema name, by ex. "dbo." => "dbo"
-            modelBuilder.HasDefaultSchema (databaseOwner.Substring (0, databaseOwner.Length - 1));
-
-            base.OnModelCreating (modelBuilder);
+            return Set.FromSql (sql.Replace ("{objectQualifier}", Config.GetObjectQualifer ()), parameters).AsNoTracking ();
         }
     }
 }
