@@ -15,7 +15,7 @@
         <copyright>Copyright 2018 Roman M. Yagodin &lt;roman.yagodin@gmail.com&gt;</copyright>
         <tags>DotNetNuke DNN EntityFrameworkCore</tags>
         <dependencies>
-			<dependency id="R7.Dnn.Extensions" version="0.13.0" />
+			<dependency id="R7.Dnn.Extensions" version="0.13.0-alpha1" />
             <dependency id="Microsoft.EntityFrameworkCore.SqlServer" version="1.1.1" />
 		</dependencies>
     </metadata>
