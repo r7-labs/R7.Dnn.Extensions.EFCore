@@ -22,8 +22,52 @@
                         <assembly>
                             <name>R7.Dnn.Extensions.EFCore.dll</name>
                         </assembly>
-                        <!-- <assembly><name></name></assembly> -->
-                    </assemblies>
+                        <assembly>
+			                <name>Microsoft.EntityFrameworkCore.dll</name>
+			            </assembly>
+			            <assembly>
+			                <name>Microsoft.EntityFrameworkCore.Relational.dll</name>
+			            </assembly>
+			            <assembly>
+			                <name>Microsoft.EntityFrameworkCore.SqlServer.dll</name>
+			            </assembly>
+			            <assembly>
+			                <name>Microsoft.Extensions.Caching.Abstractions.dll</name>
+			            </assembly>
+			            <assembly>
+			                <name>Microsoft.Extensions.Caching.Memory.dll</name>
+			            </assembly>
+			            <assembly>
+			                <name>Microsoft.Extensions.DependencyInjection.Abstractions.dll</name>
+			            </assembly>
+			            <assembly>
+			                <name>Microsoft.Extensions.DependencyInjection.dll</name>
+			            </assembly>
+			            <assembly>
+			                <name>Microsoft.1xtensions.Logging.Abstractions.dll</name>
+			            </assembly>
+			            <assembly>
+			                <name>Microsoft.Extensions.Logging.dll</name>
+			            </assembly>
+			            <assembly>
+			                <name>Microsoft.Extensions.Options.dll</name>
+			            </assembly>
+			            <assembly>
+			                <name>Microsoft.Extensions.Primitives.dll</name>
+			            </assembly>
+			            <assembly>
+			                <name>Remotion.Linq.dll</name>
+			            </assembly>
+			            <assembly>
+			                <name>System.Collections.Immutable.dll</name>
+			            </assembly>
+			            <assembly>
+			                <name>System.Diagnostics.DiagnosticSource.dll</name>
+			            </assembly>
+                        <assembly>
+                            <name>System.Interactive.Async.dll</name>
+                        </assembly>
+			        </assemblies>
                 </component>
                 <component type="File">
                     <files>

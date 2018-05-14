@@ -9,6 +9,21 @@
         <ItemGroup>
             <InstallBinaryFiles Include="$(MainProjectOutputPath)/R7.Dnn.Extensions.EFCore.dll" />
 			<InstallBinaryFiles Include="$(MainProjectOutputPath)/R7.Dnn.Extensions.EFCore.xml" />
+			<InstallBinaryFiles Include="$(MainProjectOutputPath)/Microsoft.EntityFrameworkCore.dll" />
+			<InstallBinaryFiles Include="$(MainProjectOutputPath)/Microsoft.EntityFrameworkCore.Relational.dll" />
+			<InstallBinaryFiles Include="$(MainProjectOutputPath)/Microsoft.EntityFrameworkCore.SqlServer.dll" />
+			<InstallBinaryFiles Include="$(MainProjectOutputPath)/Microsoft.Extensions.Caching.Abstractions.dll" />
+			<InstallBinaryFiles Include="$(MainProjectOutputPath)/Microsoft.Extensions.Caching.Memory.dll" />
+			<InstallBinaryFiles Include="$(MainProjectOutputPath)/Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+			<InstallBinaryFiles Include="$(MainProjectOutputPath)/Microsoft.Extensions.DependencyInjection.dll" />
+			<InstallBinaryFiles Include="$(MainProjectOutputPath)/Microsoft.Extensions.Logging.Abstractions.dll" />
+			<InstallBinaryFiles Include="$(MainProjectOutputPath)/Microsoft.Extensions.Logging.dll" />
+			<InstallBinaryFiles Include="$(MainProjectOutputPath)/Microsoft.Extensions.Options.dll" />
+			<InstallBinaryFiles Include="$(MainProjectOutputPath)/Microsoft.Extensions.Primitives.dll" />
+			<InstallBinaryFiles Include="$(MainProjectOutputPath)/Remotion.Linq.dll" />
+			<InstallBinaryFiles Include="$(MainProjectOutputPath)/System.Collections.Immutable.dll" />
+			<InstallBinaryFiles Include="$(MainProjectOutputPath)/System.Diagnostics.DiagnosticSource.dll" />
+			<InstallBinaryFiles Include="$(MainProjectOutputPath)/System.Interactive.Async.dll" />
 		</ItemGroup>
         <!-- Declare manifest files -->
         <ItemGroup>
