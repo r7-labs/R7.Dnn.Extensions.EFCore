@@ -44,7 +44,7 @@
 			                <name>Microsoft.Extensions.DependencyInjection.dll</name>
 			            </assembly>
 			            <assembly>
-			                <name>Microsoft.1xtensions.Logging.Abstractions.dll</name>
+			                <name>Microsoft.Extensions.Logging.Abstractions.dll</name>
 			            </assembly>
 			            <assembly>
 			                <name>Microsoft.Extensions.Logging.dll</name>
