@@ -35,7 +35,7 @@ namespace R7.Dnn.Extensions.EFCore
 
         #region IDataContext implementation
 
-        public IDataSet<TEntity> GetDataSet<TEntity> () where TEntity : class
+        public virtual IDataSet<TEntity> GetDataSet<TEntity> () where TEntity : class
         {
             return new EFCoreDataSet<TEntity> (Set<TEntity> ());
         }

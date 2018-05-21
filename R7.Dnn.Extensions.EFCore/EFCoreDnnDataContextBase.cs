@@ -32,6 +32,15 @@ namespace R7.Dnn.Extensions.EFCore
             ChangeTracker.AutoDetectChangesEnabled = false;
         }
 
+        #region IDataContext implementation
+
+        public override IDataSet<TEntity> GetDataSet<TEntity> ()
+        {
+            return new EFCoreDnnDataSet<TEntity> (Set<TEntity> ());
+        }
+
+        #endregion
+
         protected override void OnConfiguring (DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured) {
