@@ -33,7 +33,9 @@ namespace R7.Dnn.Extensions.EFCore
 
         public override IQueryable<TEntity> FromSql (string sql, params object [] parameters)
         {
-            return Set.FromSql (sql.Replace ("{objectQualifier}", Config.GetObjectQualifer ()), parameters).AsNoTracking ();
+            return Set.FromSql (sql.Replace ("{objectQualifier}", Config.GetObjectQualifer ())
+                                   .Replace ("{databaseOwner}", Config.GetDataBaseOwner ()),
+                                parameters).AsNoTracking ();
         }
     }
 }
