@@ -1,6 +1,6 @@
 ﻿<dotnetnuke type="Package" version="5.0">
     <packages>
-        <package name="R7.Dnn.Extensions.EFCore" type="Library" version="00.01.00">
+        <package name="R7.Dnn.Extensions.EFCore" type="Library" version="00.01.01">
             <friendlyName>R7.Dnn.Extensions.EFCore</friendlyName>
             <description>R7.Dnn.Extensions.EFCore is a  library for DNN Platform web CMS extensions development with Entity Framework Core.</description>
             <owner>
