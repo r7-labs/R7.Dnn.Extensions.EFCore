@@ -1,6 +1,6 @@
 ﻿<dotnetnuke type="Package" version="5.0">
     <packages>
-        <package name="R7.Dnn.Extensions.EFCore" type="Library" version="00.01.01">
+        <package name="R7.Dnn.Extensions.EFCore" type="Library" version="00.02.00">
             <friendlyName>R7.Dnn.Extensions.EFCore</friendlyName>
             <description>R7.Dnn.Extensions.EFCore is a  library for DNN Platform web CMS extensions development with Entity Framework Core.</description>
             <owner>
@@ -12,7 +12,7 @@
             <license src="license.htm" />
             <releaseNotes src="releaseNotes.htm" />
             <dependencies>
-                <dependency type="coreVersion">08.00.04</dependency>
+                <dependency type="coreVersion">09.04.00</dependency>
 				<dependency type="managedPackage" version="0.13.0">R7.Dnn.Extensions</dependency>
 			</dependencies>
             <components>
@@ -36,12 +36,6 @@
 			            </assembly>
 			            <assembly>
 			                <name>Microsoft.Extensions.Caching.Memory.dll</name>
-			            </assembly>
-			            <assembly>
-			                <name>Microsoft.Extensions.DependencyInjection.Abstractions.dll</name>
-			            </assembly>
-			            <assembly>
-			                <name>Microsoft.Extensions.DependencyInjection.dll</name>
 			            </assembly>
 			            <assembly>
 			                <name>Microsoft.Extensions.Logging.Abstractions.dll</name>

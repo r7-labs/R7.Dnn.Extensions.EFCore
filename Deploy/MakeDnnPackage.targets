@@ -14,8 +14,6 @@
 			<InstallBinaryFiles Include="$(MainProjectOutputPath)/Microsoft.EntityFrameworkCore.SqlServer.dll" />
 			<InstallBinaryFiles Include="$(MainProjectOutputPath)/Microsoft.Extensions.Caching.Abstractions.dll" />
 			<InstallBinaryFiles Include="$(MainProjectOutputPath)/Microsoft.Extensions.Caching.Memory.dll" />
-			<InstallBinaryFiles Include="$(MainProjectOutputPath)/Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
-			<InstallBinaryFiles Include="$(MainProjectOutputPath)/Microsoft.Extensions.DependencyInjection.dll" />
 			<InstallBinaryFiles Include="$(MainProjectOutputPath)/Microsoft.Extensions.Logging.Abstractions.dll" />
 			<InstallBinaryFiles Include="$(MainProjectOutputPath)/Microsoft.Extensions.Logging.dll" />
 			<InstallBinaryFiles Include="$(MainProjectOutputPath)/Microsoft.Extensions.Options.dll" />
